@@ -1,5 +1,7 @@
 const birthDate = new Date('2023-06-23T00:00:00');
 
+const clock = document.querySelector('.clock')
+
 const countdown = document.querySelector('.clock-countdown');
 
 const timeArray = [60*60*1000*24, 60*60*1000, 60*1000, 1000]
@@ -22,5 +24,8 @@ function stringifyDaysWord(days) {
 }
 
 setInterval(() => {
-    countdown.textContent = stringifyTime()
+    if (birthDate.getTime() - Date.now() <= 0) {
+        clock.innerHTML = 'С Днём рождения!!!'
+    }
+    else countdown.textContent = stringifyTime()
 }, 1000)

@@ -20,14 +20,12 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 60px;
     font-family: 'Marck Script', cursive;
     color: #7B68EE;
 }
 
 .clock h2 {
-    font-size: 60px;
-}
-
-.clock-countdown {
-    font-size: 40px;
+    text-align: center;
 }
